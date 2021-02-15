@@ -59,6 +59,7 @@ header-top
 }
 .header-top span{
     text-decoration: underline;
+    cursor: not-allowed;
     
 }
 /*
@@ -87,6 +88,9 @@ header nav{
     width: 100%;
     justify-content: space-between;
     
+}
+.header-nav a{
+   cursor: not-allowed;
 }
  nav ul li+li{
      margin-left: 2.5rem;
@@ -280,6 +284,7 @@ CUSTOM SECTION
     padding: 10px 24px;
     font-size: 15px;
     color: black;
+    cursor: not-allowed;
 }    
 
 /*
@@ -304,7 +309,12 @@ INTERNAL-NAV SECTION
 }
 .internal-nav ul li:nth-child(1) a{
     color: black;
+    cursor: pointer;
 }
+.internal-nav ul li a{
+    cursor: not-allowed ;
+}
+
 
 
 /*
@@ -329,6 +339,7 @@ TOUR SECTION
     font-weight: 100;
     font-family: 'FontAwesome';
     margin-top: 50px;
+    cursor: not-allowed;
 }
 .headings hr{
     width: 197px;
@@ -399,6 +410,7 @@ Footer SECTION
     color: #666666;
     font-size: 16px;
     border-bottom: solid 1px black;
+    cursor: not-allowed;
     
 }
 .input{
@@ -602,7 +614,6 @@ LARGE TAB
         height: 100%;
         
     }
-
     /*
     ==================
     FOOTER-SECTION

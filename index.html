@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon shortcut" href="./tailor logo.png">
+    <title>Tailor-Master | LOGICADE Portfolio </title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -16,37 +17,37 @@
     </section>
 
     <header class="container-primary d-flex header-nav justify-sb">
-        <img class="logo" src="./images/Gold_LogoFinal on black 1.jpg" alt="">
+        <img class="logo" src="./images/Gold_LogoFinal on black 1.png" alt="">
         <nav class="d-flex">
             <ul class="d-flex">
                 <li>
-                    <a href=""> HOME</a>
+                    <a href="#"> HOME</a>
                 </li>
                 <li>
-                    <a href="">COVID-19</a>
+                    <a href="#">COVID-19</a>
                 </li>
                 <li>
-                    <a href="">BOUTIQUES</a>
+                    <a href="#">BOUTIQUES</a>
                 </li>
                 <li>
-                    <a href="">COLLECTION</a>
+                    <a href="#">COLLECTION</a>
                 </li>
                 <li>
-                    <a href="">ET CETRA</a>
+                    <a href="#">ET CETRA</a>
                 </li>
                 <li>
-                    <a href="">CLUB ELEMENTS</a>
+                    <a href="#">CLUB ELEMENTS</a>
                 </li>
             </ul>
             <ul class="d-flex">
                 <li>
-                    <a href="">CONTACT</a>
+                    <a href="#">CONTACT</a>
                 </li>
                 <li>
-                    <a href="">VISIT</a>
+                    <a href="#">VISIT</a>
                 </li>
                 <li>
-                    <a href=""><i class="fas fa-search"></i></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
                 </li>
             </ul>
         </nav>
@@ -59,7 +60,7 @@
     </section>
     <section class="tailoring container-primary">
         <div class="tailoring-img">
-            <img src="./images/img.jpg.sketch" alt="">
+            <img src="./images/lOGO iCON.jpg" alt="">
         </div>
         <h1>
             BESPOKE BRITISH TAILORING
@@ -213,9 +214,20 @@
         </div>
         <div class="footer-img container-primary">
             <div class="footer-logo-img"><img src="./images/Gold_LogoFinal on black 1.jpg" alt=""></div>
-            <p>&copy 2019 All Right Reserved</p>
+            <p>&copy 2019 All Right Reserved | LOGICADE</p>
 
         </div>
+        <script>
+        // prevent default
+        document.querySelector('body').addEventListener('click', preventDflt);
+        function preventDflt(e) {
+            var tElment = e.target.getAttribute('href');
+            var tElmentP = e.target.parentElement.getAttribute('href');
+            if (tElment == '#' || tElmentP == '#') {
+                e.preventDefault();
+            }
+        }
+    </script>
 
     </section>
     <script src="https://kit.fontawesome.com/b6fdcdf49e.js" crossorigin="anonymous"></script>
