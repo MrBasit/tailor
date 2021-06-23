@@ -15,6 +15,12 @@ body{
 	font-size: 16px;
 
 }
+ li{
+    list-style-type: none !important;
+}
+.home{
+    opacity: 1;
+}
 .display-none{
     display: none;
 }
@@ -36,7 +42,8 @@ ul{
 }
 a{
     text-decoration: none;
-    color: #C0C0C0;
+    color: #0f0f0f;
+    opacity: 0.5;
 }
 .burger-menu{
     display: none;
@@ -102,17 +109,21 @@ nav ul li a{
     padding-right: 10px;
 }
 
-
-.sec-1-img {
-    background-image: url("./images/bg-img.jpg");
-    height: 570px;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+.sec-1-img{
+    display: flex;
+    overflow: hidden;
 }
 .sec-1-img img{
-
+ width: 100%;
+ animation: scale 2000ms ease-in-out forwards;
 }
+
+ 
+  @keyframes scale {
+    to {
+      transform: scale(0.95);
+    }
+  }
 .tailoring{
     padding-bottom: 30px;
 }
@@ -168,18 +179,19 @@ cards section
     min-width: 250px;
     margin-left: 50px;
     margin-right: 48px;
+    height: 500px;
     
 }
 .card-1 h5{
-    padding-top: 6rem;
-    padding-right:3.5rem;
-    padding-bottom: 4rem;
+    padding-top: 90px;
+    padding-right:50px;
+    padding-bottom: 65px;
     font-size: 28px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }   
 .card-1 h6{
-    padding-right: 4rem;
+    padding-right: 65px;
     font-size: 15px;
     font-weight: 700;
     padding-bottom: 10px;
@@ -188,14 +200,15 @@ cards section
 }   
 .card-1 hr{
     width: 80%;
-    margin-top: .8rem;
+    margin-top: 10px;
 }
 .card-2, .card-3{
-    min-width: 480px;
+    /* min-width: 480px; */
+    width: 480px;
     border-radius: 10%;
     overflow: hidden;
     height: 550px;
-    margin-right: 145px;
+    margin-right: 150px;
     
 }
 .card-2 img{
@@ -240,13 +253,9 @@ CUSTOM SECTION
     text-align: center;
 }
 .custom-2 img{
-   
-    width: 100%;
-    
+    width: 100%;    
 }
-.custom-2-img{
-    
-}
+
 .custom-1{
     width: 368px;
 }
@@ -304,16 +313,22 @@ INTERNAL-NAV SECTION
     justify-content: space-evenly;
     font-size: 16px;
 }
-.internal-nav hr{
-    margin-top: 20px;
-}
-.internal-nav ul li:nth-child(1) a{
+.internal-nav ul li a{
     color: black;
     cursor: pointer;
+    opacity: 0.6;
 }
-.internal-nav ul li a{
-    cursor: not-allowed ;
+.internal-nav ul li a:hover{
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+ }
+
+.internal-nav ul li a.active5{
+   opacity: 1;
+   border-bottom: 1px solid black;
+   transition: all 0.4s ease-in-out;
 }
+
 
 
 
@@ -365,7 +380,7 @@ TOUR SECTION
     margin-left: 15px;
     
 }
-.circle{
+.circle1,.circle2,.circle3,.circle4{
     height: 15px;
     width: 15px;
     border-radius: 50%;
@@ -373,17 +388,13 @@ TOUR SECTION
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 5px;
+    cursor: pointer;
 }
-.inside-dot{
-    height: 5px;
-    width: 5px;
-    background-color: white;
-    border-radius: 50%;
-}
-.inside-dot.active{
+.circle1.active1,.circle2.active2,.circle3.active3,.circle4.active4{
     background-color:black;
-    z-index: 10;
 }
+
 /*
 =================
 Footer SECTION
@@ -409,7 +420,6 @@ Footer SECTION
 .ul li a{
     color: #666666;
     font-size: 16px;
-    border-bottom: solid 1px black;
     cursor: not-allowed;
     
 }
@@ -434,6 +444,11 @@ Footer SECTION
     padding: 16px 70px;
     font-size: 18px;
     color: black;
+    cursor: pointer;
+}
+.news-letter a:hover{
+  background-color: black;
+  color: #f9f9f9;
 }
 .news-flex{
     display: flex;
@@ -469,6 +484,19 @@ Footer SECTION
     color: #666666;
     
 }
+.small{
+	display: none;
+	color: green;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.small-error{
+	display: none;
+	color: red;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
 
 /*
 ==================
@@ -609,6 +637,7 @@ LARGE TAB
         justify-content: space-between;
         height: 270px;
     }
+
     .tour-img img {
         width: 100%;
         height: 100%;
@@ -624,6 +653,7 @@ LARGE TAB
         color: #666666;
         font-size: 16px;
         
+        
     }
     .ul li {
     
@@ -631,8 +661,10 @@ LARGE TAB
     }
     .news-letter a {
         font-size: 16px;
+        cursor: pointer;
         
     }
+
     .news-flex {
         display: flex;
         flex-direction: column;
@@ -705,14 +737,14 @@ SMALL TAB
     }
 
     .card-1 {
-        min-width: 241px;
+        min-width: 220px;
         margin-left: 48px;
         margin-right: 6px;
     }
     .card-1 h5 {
-        padding-top: 5rem;
+        padding-top: 1rem;
         padding-right: 2.5rem;
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
         font-size: 20px;
         font-weight: 600;
         font-family: 'Poppins', sans-serif;
@@ -818,7 +850,6 @@ SMALL TAB
     .ul li a {
         color: #666666;
         font-size: 12px;
-        border-bottom: solid 1px black;
     }
     .news-flex {
         width: 35%;
@@ -843,6 +874,7 @@ SMALL TAB
         border: 2px solid black;
         font-family: 'FontAwesome';
         padding: 10px 55px;
+        cursor: pointer !important;
     }
     .footer {
         margin-top: 55px;
@@ -884,12 +916,51 @@ MOBILE-VIEW
         background-image: url("./images/bg-img.jpg");
         height: 210px;
     }
-    .cards {
-        height: 360px !important;
+    .wrap{
+        width: 100px !important;
+        height: 280px !important;
+    }
+    .wrap2{
+        position:relative;
+        width: 240px !important;
+        margin:0px !important;
+      }
+    .slider {
+        width: 100px !important;
     }
     .cards {
+        height: 280px !important;
+        overflow:visible;
+        padding-top: 20px;
+    }
+    .card-1{
+        width: 90px !important;
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+        
+    }
+    .card-1 h5{
+        padding-top: 10px !important;
+        padding-right:0px !important;
+        padding-bottom: 10px !important;
+        font-size: 12px !important;
+    }   
+    .card-1 h6{
+        padding-right: 0px !important; 
+        font-size: 10px !important; 
+        padding-bottom: 10px !important;
+    }   
+    .card-1 hr{
+        width: 80%;
+        margin-top: 10px;
+    }
+    .card-2, .card-3{
+        width: 150px !important;
+        border-radius: 10%;
         overflow: hidden;
-        padding-top: 0px;
+        height: 250px !important;
+        margin-right: 10px !important ;
+        
     }
     /*
     =================
@@ -1077,3 +1148,70 @@ MOBILE-VIEW
         font-size: 14px ;
     }
 }  
+
+
+
+:root {
+  /* defined with JavaScript */
+  --marquee-elements: 3; 
+  --marquee-elements-displayed: 3;
+}
+
+/* ========================= */
+/*  CARDS SLIDER LEFT */
+/* ========================= */
+
+.wrap{
+    position:relative;
+    width: 256px;
+    height:512px;
+    margin:50px auto;
+  }
+  .slider{
+    width: 256px;
+    height:512px;
+    margin:50px auto;
+    overflow:hidden;
+}
+.slider__row
+{
+      display:flex;
+      flex-direction: column;
+      
+      position:relative;
+      top: 0;
+      left: 0;
+      height:900000000000px;
+      overflow:hidden;
+      
+      transition:.6s;
+}
+
+
+/* ========================= */
+/*  CARDS SLIDER RIGHT */
+/* ========================= */
+
+.wrap2{
+    position:relative;
+    width: 1050px;
+    margin:10px;
+  }
+  .slider2{
+    width: 1200px;
+    margin:10px;
+    overflow:hidden;
+}
+.slider__row2{
+    display:flex; 
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 900000000000px;
+    overflow:hidden;
+    transition:.6s;
+}
+
+
+  
+
